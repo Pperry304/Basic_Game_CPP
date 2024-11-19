@@ -1,3 +1,7 @@
+// ! cpp
+// Game TX 
+// Copyright by @Truongchinh304
+    
 #include <iostream>
 #include <cmath>
 #include <vector>
