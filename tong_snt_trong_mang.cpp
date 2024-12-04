@@ -4,12 +4,12 @@
 #define SNT(i, a, n) for(int i = 2; i*i <= n; i++)
 using namespace std;
 
-int ktra_snt(int n){
-    if(n < 2) return 0;
-    SNT(i, 2, n){
-        if(n % i == 0) return 0;
+bool ktra_snt(int n){
+    if(n < 2) return false;
+    for(int i = 2; i <= sqrt(n); i++){
+        if(n % i == 0) return false;
     }
-    return n > 1;
+    return true;
 }
 
 __TruongChinh__ {
@@ -25,22 +25,20 @@ __TruongChinh__ {
     }
 
     int sum = 0;
-    vector<int> snt;
+    bool check = false;
     for(int i = 0; i < numbers.size(); i++){
         if(ktra_snt(numbers[i])){
+            cout << numbers[i] << " ";
             sum += numbers[i];
-            snt.pb(numbers[i]);
+            check = true;
         }
     }
 
-    if(snt.empty()){
-        cout << "-" << endl;
-    } else {
-        for(int x : snt){
-            cout << x << " ";
-        }
-        cout << endl << sum << endl;
+    if(!check){
+        cout << "-";
     }
 
-    return 0;
+    cout << endl << sum << endl;
+    
+    return 0;    
 }   
