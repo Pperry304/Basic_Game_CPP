@@ -6,7 +6,7 @@
 using namespace std;
 
 // Ktra số nguyên tố bth
-int ktra_snt(int n){
+bool ktra_snt(int n){
     if(n < 2) return false;
     for(int i = 2; i <= sqrt(n); i++){
         if(n % i == 0){
