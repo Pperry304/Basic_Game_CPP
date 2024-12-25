@@ -18,6 +18,9 @@
 
 using namespace std;
 
+void solve(){
+    
+}
 
 ___TruongChinh304___ {
     #ifdef ONLINE_JUDGE
